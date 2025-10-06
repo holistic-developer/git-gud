@@ -1,4 +1,9 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Git Gud!
+
+This is a [Slidev](https://github.com/slidevjs/slidev) presentation about how to use Git.
+It's designed for beginners.
+
+The slides are designed to be presented side to side with a live demo of Git commands in a terminal on a regular 16:9 ish screen.
 
 To start the slide show:
 
@@ -6,6 +11,4 @@ To start the slide show:
 - `pnpm dev`
 - visit <http://localhost:3030>
 
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
+Or view it online at https://holistic-developer.github.io/git-gud/.
