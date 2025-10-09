@@ -99,3 +99,29 @@ v-motion
 :enter="{opacity: 1, transition: {delay: 700}}"
 :initial="{opacity: 0}"
 />
+
+---
+layout: quote
+---
+
+````md magic-move
+```md
+Git gets easier 
+```
+
+```
+Git gets easier
+once you get the basic idea that
+branches are homeomorphic endofunctors
+mapping submanifolds of a Hilbert space.
+```
+````
+
+---
+layout: image
+backgroundSize: contain
+image: sink.png
+---
+
+<!-- porcelain vs plumbing -->
+---

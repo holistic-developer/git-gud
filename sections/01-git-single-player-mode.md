@@ -80,6 +80,9 @@ gitGraph TB:
     commit
     commit
 ```
+
+---
+
 ---
 layout: split
 ---
@@ -87,6 +90,17 @@ layout: split
 ## Restoring a save point
 
 ````md magic-move
+
+```sh
+# see your commit history
+git log
+```
+
+```sh
+# see your commit history
+git log --graph --decorate --abbrev-commit --pretty=oneline 
+```
+
 ```sh
 # see your commit history
 git log
@@ -117,7 +131,7 @@ git checkout
 
 ::bottom::
 
-<div class="text-center" v-click.hide="5">
+<div class="text-center" v-click.hide="7">
 
 ```mermaid
 ---
@@ -135,17 +149,18 @@ gitGraph TB:
 <v-drag-arrow pos="312,240,-56,0"
 v-motion
 :initial="{y:0}"
-:click-2="{y: -100}"
-:click-4="{y: 0}"
+:click-4="{y: -100}"
+:click-6="{y: 0}"
 />
 
 </div>
 
 ---
-layout: section
+layout: cover
+background: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2dtMnV3djl1aWhhcXN2NDJ6aHRjM2txMmM5Zm14N2Q3b3BoYXl6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v4hXkjXZAuMW5VfReA/giphy.gif 
 ---
 
-## Split reality
+## Git can **split reality**
 
 ---
 layout: image
@@ -322,8 +337,6 @@ layout: section
 ```
 Auto-merging index.html
 CONFLICT (content): Merge conflict in index.html
-Automatic merge failed; fix conflicts
-and then commit the result.
 ```
 </div>
 
@@ -337,7 +350,7 @@ image: merge.png
 
 ## How conflicts are made
 
-
+<div class="text-center pt-8">
 ```mermaid
 ---
 config:
@@ -351,5 +364,14 @@ gitGraph TB:
     commit
     merge feature type: REVERSE
 ```
+</div>
+
+---
+layout: center
+---
+### Remember!
+
+Keep calm and follow the instructions 
+provided by git
 
 ---

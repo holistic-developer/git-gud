@@ -29,7 +29,10 @@ src: ./sections/00-intro.md
 src: ./sections/01-git-single-player-mode.md
 ---
 
-
 ---
 src: ./sections/02-git-multi-player-mode.md
+---
+
+---
+src: ./sections/03-lesser-known-git-features.md
 ---
