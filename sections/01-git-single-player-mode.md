@@ -1,5 +1,6 @@
 ---
-layout: section
+layout: cover
+background: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXJzaHQzaWlicDV1dnhzOWJ1bXZiZmFvZTA3ZnFuaWNrNmtmMWl6NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cyMqOH8rjgDHG/giphy.gif
 ---
 
 ## Using Git in <br> **single-player** mode
@@ -59,9 +60,9 @@ transition: fade
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     checkout main
-    commit id: "Ma first commit 🎉" 
+    commit id: "My first commit 🎉" 
 ```
 
 ---
@@ -73,12 +74,12 @@ class: text-center
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     checkout main
-    commit 
-    commit
-    commit
-    commit
+    commit "My first commit 🎉"
+    commit "Add moar features"
+    commit "Adjust the vibe"
+    commit "Fix issue #404" 
 ```
 
 ---
@@ -138,7 +139,7 @@ git checkout
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     checkout main
     commit
     commit
@@ -146,7 +147,7 @@ gitGraph TB:
     commit
 ```
 
-<v-drag-arrow pos="312,240,-56,0"
+<v-drag-arrow pos="312,210,-56,0"
 v-motion
 :initial="{y:0}"
 :click-4="{y: -100}"
@@ -161,12 +162,6 @@ background: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2dtMnV3djl1aWhhcX
 ---
 
 ## Git can **split reality**
-
----
-layout: image
-backgroundSize: contain
-image: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHByOGUyODdjMHl1eG85YmtwOWVjZmlxaTlkOHpvZGNla2tmb29yOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XH9tzHRGQmLSFGP6E8/giphy.gif
----
 
 ---
 layout: split
@@ -229,21 +224,22 @@ git merge feature
 ```
 ````
 
-<v-drag-arrow pos="162,445,-56,0"
+<v-drag-arrow pos="162,422,-56,0"
 style="z-index: 1000"
 v-motion
 :initial="{x: 0, y: 0, opacity: 1 }"
 :click-2="{x: 40}"
-:click-4="{x: 110}"
+:click-4="{x: 110, y: -50}"
+:click-5="{x: 110, y: -100}"
 :click-6="{opacity: 0}"
 />
 
-<v-drag-arrow pos="20,445,56,0"
+<v-drag-arrow pos="20,422,56,0"
 style="z-index: 1000"
 v-motion
-:initial="{x: 0, y: -100, opacity: 0 }"
-:click-6="{opacity: 1}"
-:click-7="{y: 0}"
+:initial="{x: 0, y: 0, opacity: 0 }"
+:click-6="{opacity: 1, transition: {delay: 500}}"
+:click-7="{y: -150}"
 />
 
 ::bottom::
@@ -255,7 +251,7 @@ v-motion
 config:
    theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
 ```
 </div>
@@ -267,7 +263,7 @@ gitGraph TB:
 config:
    theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
     branch feature
 ```
@@ -280,7 +276,7 @@ gitGraph TB:
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
     branch feature
     checkout feature
@@ -295,7 +291,7 @@ gitGraph TB:
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
     branch feature
     checkout feature
@@ -311,7 +307,7 @@ gitGraph TB:
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
     branch feature
     checkout feature
@@ -356,7 +352,7 @@ image: merge.png
 config:
   theme: base
 ---
-gitGraph TB:
+gitGraph BT:
     commit
     branch feature
     commit
