@@ -39,7 +39,7 @@ git init
 
 # create a new "save point"
 git add .
-git commit -m "add some vibes"
+git commit -m "My first commit 🎉"
 ```
 
 ```sh
@@ -51,7 +51,7 @@ git commit
 ````
 
 ---
-class: text-center
+class: text-center pt-47
 transition: fade
 ---
 
@@ -76,16 +76,15 @@ config:
 ---
 gitGraph BT:
     checkout main
-    commit "My first commit 🎉"
-    commit "Add moar features"
-    commit "Adjust the vibe"
-    commit "Fix issue #404" 
+    commit id: "My first commit 🎉"
+    commit id: "Add moar features"
+    commit id: "Adjust the vibe"
+    commit id: "Fix issue #404" 
 ```
 
 ---
-
----
 layout: split
+transition: slide-left
 ---
 
 ## Restoring a save point
@@ -102,12 +101,7 @@ git log
 git log --graph --decorate --abbrev-commit --pretty=oneline 
 ```
 
-```sh
-# see your commit history
-git log
-```
-
-```sh {all|all}
+```sh 
 # see your commit history
 git log
 
@@ -115,7 +109,7 @@ git log
 git checkout < commit-hash >
 ```
 
-```sh {all|all}
+```sh 
 # see your commit history
 git log
 
@@ -123,17 +117,51 @@ git log
 git checkout main
 ```
 
+```sh 
+# see your commit history
+git log
+
+# go back to the commit before that
+git checkout main^1
+```
+
+```sh 
+# see your commit history
+git log
+
+# reset your actual branch
+git reset main^1
+```
+
 ```sh
 # all you need to remember
-git log
+git log 
 git checkout
+git reset 
 ```
 ````
 
 ::bottom::
 
-<div class="text-center" v-click.hide="7">
 
+<div v-click.hide="6">
+
+<div v-click.hide="5" class="absolute bottom-10 left-50">
+```mermaid
+---
+config:
+   theme: base
+---
+gitGraph BT:
+    checkout main
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    commit id: "D"
+```
+</div>
+
+<div v-click="[5]" class="absolute bottom-10 left-50">
 ```mermaid
 ---
 config:
@@ -141,27 +169,29 @@ config:
 ---
 gitGraph BT:
     checkout main
-    commit
-    commit
-    commit
-    commit
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
 ```
+</div>
 
-<v-drag-arrow pos="312,210,-56,0"
+<v-drag-arrow pos="310, 12,-56,0"
 v-motion
-:initial="{y:0}"
-:click-4="{y: -100}"
-:click-6="{y: 0}"
+:initial="{y: -200}"
+:click-2="{y: -100, transition: {delay: 800}}"
+:click-3="{y: -200, transition: {delay: 800}}"
+:click-4="{y: -150, transition: {delay: 800}}"
 />
 
 </div>
 
 ---
 layout: cover
+class: text-center
 background: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2dtMnV3djl1aWhhcXN2NDJ6aHRjM2txMmM5Zm14N2Q3b3BoYXl6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v4hXkjXZAuMW5VfReA/giphy.gif 
 ---
 
-## Git can **split reality**
+## **Split reality**
 
 ---
 layout: split
@@ -222,15 +252,22 @@ git commit
 git switch main
 git merge feature
 ```
+
+```sh
+# all you need to remember
+git branch 
+git switch
+git merge 
+```
 ````
 
-<v-drag-arrow pos="162,422,-56,0"
+<v-drag-arrow pos="165,422,-56,0"
 style="z-index: 1000"
 v-motion
 :initial="{x: 0, y: 0, opacity: 1 }"
 :click-2="{x: 40}"
-:click-4="{x: 110, y: -50}"
-:click-5="{x: 110, y: -100}"
+:click-4="{x: 70, y: -50}"
+:click-5="{x: 70, y: -100}"
 :click-6="{opacity: 0}"
 />
 
@@ -240,6 +277,7 @@ v-motion
 :initial="{x: 0, y: 0, opacity: 0 }"
 :click-6="{opacity: 1, transition: {delay: 500}}"
 :click-7="{y: -150}"
+:click-8="{opacity: 0}"
 />
 
 ::bottom::
@@ -252,7 +290,7 @@ config:
    theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
 ```
 </div>
 
@@ -264,7 +302,7 @@ config:
    theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
     branch feature
 ```
 </div>
@@ -277,10 +315,10 @@ config:
   theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
     branch feature
     checkout feature
-    commit
+    commit id: "B"
 ```
 </div>
 
@@ -292,15 +330,15 @@ config:
   theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
     branch feature
     checkout feature
-    commit
-    commit
+    commit id: "B"
+    commit id: "C"
 ```
 </div>
 
-<div v-click="7" class="absolute bottom-10">
+<div v-click="[7]" class="absolute bottom-10">
 
 ```mermaid
 ---
@@ -308,11 +346,11 @@ config:
   theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
     branch feature
     checkout feature
-    commit
-    commit
+    commit id: "B"
+    commit id: "C"
     checkout main
     merge feature
 ```
@@ -323,6 +361,26 @@ layout: image
 backgroundSize: contain
 image: https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTQybmYzZm05OGRjbzhvOThhM3FqYnJrZjRtc2Y5OHY2dXlvNmgycCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cFkiFMDg3iFoI/giphy.gif 
 ---
+
+---
+
+## How conflicts are made
+
+<div class="pl-4 pt-8">
+```mermaid
+---
+config:
+  theme: base
+---
+gitGraph BT:
+    commit id: "Add index.html"
+    branch feature
+    commit id: "Upate title"
+    checkout main
+    commit id: "Change title"
+    merge feature type: REVERSE
+```
+</div>
 
 ---
 layout: section
@@ -338,36 +396,88 @@ CONFLICT (content): Merge conflict in index.html
 
 ---
 layout: image
+image: follow-instructions.jpg
 backgroundSize: contain
-image: merge.png
 ---
 
 ---
+layout: two-cols
+class: flex items-center justify-center flex-col height-full
+transition: slide-left
+---
+Before merge
 
-## How conflicts are made
-
-<div class="text-center pt-8">
 ```mermaid
 ---
 config:
   theme: base
 ---
 gitGraph BT:
-    commit
+    commit id: "A"
+    commit id: "B"
     branch feature
-    commit
+    checkout feature
+    commit id: "C"
+    commit id: "D"
+```
+
+::right::
+
+<div v-click.hide="1" class="absolute">
+After regular merge
+
+```mermaid
+---
+config:
+  theme: base
+---
+gitGraph BT:
+    commit id: "A"
+    commit id: "B"
+    branch feature
+    checkout feature
+    commit id: "C"
+    commit id: "D"
     checkout main
-    commit
-    merge feature type: REVERSE
+    merge feature
 ```
 </div>
 
----
-layout: center
----
-### Remember!
+<div v-click="1" class="absolute mt-3.5">
+After fast-forward merge
 
-Keep calm and follow the instructions 
-provided by git
+<div class="mt-3.5" ml-5>
+```mermaid
+---
+config:
+  theme: base
+---
+gitGraph BT:
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    commit id: "D"
+```
+</div>
+</div>
+
+---
+layout: cover
+class: text-center
+background: https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTF0b3ZlZzkxbXI3OHV3ZjhhMXBnY2FlZG9wdG82bm0yZ243a2RlaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zLPGp6EBG3zrqNXZBT/giphy.gif 
+backgroundSize: contain
+---
+
+## **Change the flow of time**
+
+---
+
+## Rebasing
+
+---
+layout: image
+backgroundSize: contain
+image: merge.png
+---
 
 ---

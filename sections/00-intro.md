@@ -6,7 +6,7 @@ transition: slide-left
 
 # Git Gud!
 
-A beginner's guide
+A beginner's guide to Git
 
 ---
 layout: quote
@@ -77,23 +77,13 @@ version control system
 ├── project
 ├── project-v2
 ├── project-final
-├── project-final-final
-└── other stuff
-```
-
-```
-.
-├── project
-├── project-v2
-├── project-final
-├── project-final-final
 ├── project-final-fr-fr
 └── other stuff
 ```
 ````
 
 <img src="/facepalm.png"
-v-click="5"
+v-click="4"
 style="max-width: 200px; margin: auto"
 v-motion
 :enter="{opacity: 1, transition: {delay: 700}}"

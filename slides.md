@@ -19,9 +19,6 @@ seoMeta:
   ogDescription: A beginners guide to Git, one of the most important tools for developers.
 mdc: true
 transition: slide-up
----
-
----
 src: ./sections/00-intro.md
 ---
 
