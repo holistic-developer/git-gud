@@ -1,15 +1,67 @@
-interactive modes for git add
-git add -i
+---
+layout: cover
+background: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjBrem4wcDVwaXE3cTdrcm5ydTZtMDRyZHo4ZDlpd3l5eWsxOHhzMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GCvktC0KFy9l6/giphy.gif
+---
 
-git cherry-pick
+## More cool features
+you probably never use
 
-interactive mode for git rebase
+---
+transition: fade
+---
+<v-clicks>
 
-git worktree
+```sh
+# Pick specific commits from other branches
+git cherry-pick < commit-hash >
+```
 
-git bisect
+```sh
+# Interactive mode for adding changes
+git add --interactive
+```
 
-git submodule
+```sh
+# Interactive mode for rebasing
+git rebase --interactive
+```
+
+````md magic-move
+```sh
+# Find the commit that introduced a bug
+git bisect start HEAD v1.0
+git bisect bad
+git bisect good
+git bisect reset
+```
+
+```sh
+# Find the commit that introduced a bug
+git bisect 
+```
+````
+
+```sh
+# Stop tracking changes of a file
+git update-index --assume-unchanged < file >
+```
+
+```sh
+# Checkout multiple branches at the same time
+git worktree add ../project-feature feature
+```
+
+```sh
+# Add git repos to your git repo
+git submodule add < url >
+```
+</v-clicks>
+
+---
+
+```sh
+# All you need to remember
+```
 
 ---
 layout: image

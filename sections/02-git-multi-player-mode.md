@@ -161,5 +161,3 @@ checkout "release/v1.0.x"
 commit id: "E" tag: "v1.0.0"
 commit id: "F" tag: "v1.0.1"
 ```
-
----

@@ -134,7 +134,7 @@ git reset main^1
 ```
 
 ```sh
-# all you need to remember
+# All you need to remember
 git log 
 git checkout
 git reset 
