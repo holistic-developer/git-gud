@@ -21,7 +21,7 @@ layout: center
 
 ---
 
-## A few more commands
+## Talk to a remote repository
 
 ````md magic-move
 ```sh
@@ -85,8 +85,7 @@ backgroundSize: contain
 use the **force**
 
 ---
-transition: slide-left
----
+
 ````md magic-move
 ```sh
 # If the history was changed
@@ -101,6 +100,7 @@ git push --force
 git push --force-with-lease
 ```
 ````
+
 ---
 layout: center
 transition: fade
@@ -133,7 +133,6 @@ merge release tag: "v1.1.0"
 
 ---
 layout: center
-transition: slide-left
 ---
 ## Trunk based development
 ```mermaid

@@ -84,7 +84,6 @@ gitGraph BT:
 
 ---
 layout: split
-transition: slide-left
 ---
 
 ## Restoring a save point
@@ -402,7 +401,6 @@ backgroundSize: contain
 ---
 layout: two-cols
 class: flex items-center justify-center flex-col height-full
-transition: slide-left
 ---
 Before merge
 

@@ -1,7 +1,6 @@
 ---
 layout: cover
 class: text-center
-transition: slide-left
 ---
 
 # Git Gud!
@@ -10,7 +9,6 @@ A beginner's guide to Git
 
 ---
 layout: quote
-transition: slide-left
 ---
 
 ## What is Git?
@@ -114,4 +112,3 @@ image: sink.png
 ---
 
 <!-- porcelain vs plumbing -->
----
