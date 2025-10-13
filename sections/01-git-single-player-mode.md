@@ -43,7 +43,7 @@ git commit -m "My first commit 🎉"
 ```
 
 ```sh
-# all you need to remember
+# All you need to remember
 git init
 git add . 
 git commit
@@ -195,7 +195,6 @@ background: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2dtMnV3djl1aWhhcX
 
 ---
 layout: split
-clicks=6
 ---
 ## Branching 
 
@@ -471,8 +470,45 @@ backgroundSize: contain
 ## **Change the flow of time**
 
 ---
-
+layout: two-cols 
+---
 ## Rebasing
+
+```sh
+git rebase main
+```
+
+::right::
+<div class="pl-5">
+
+```mermaid
+---
+config:
+  theme: base
+---
+gitGraph BT:
+    commit id: "A"
+    branch feature
+    checkout feature
+    commit id: "B"
+    checkout main
+    commit id: "C"
+```
+
+turns 👆into 👇 
+```mermaid
+---
+config:
+  theme: base
+---
+gitGraph BT:
+    commit id: "A"
+    commit id: "C"
+    branch feature
+    checkout feature
+    commit id: "B"
+```
+</div>
 
 ---
 layout: image
